@@ -8,7 +8,6 @@
     <title>Countdown para o Evento do Ano!!</title>
     <!-- Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Add some basic styles to modernize the look -->
     <style>
         * {
             margin: 0;
@@ -35,7 +34,7 @@
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
+            max-width: 700px;
             width: 100%;
             margin: 20px;
         }
@@ -48,7 +47,7 @@
 
         iframe {
             width: 100%;
-            height: auto;
+            height: 300px;
             border-radius: 8px;
             overflow: hidden;
             margin-bottom: 20px;
@@ -68,6 +67,43 @@
         .cta:hover {
             background-color: #2980b9;
         }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+        }
     </style>
 </head>
 
@@ -76,8 +112,41 @@
         <h1>Countdown para o Evento do Ano!!</h1>
         <iframe src="https://w2.countingdownto.com/5720009" frameborder="0"></iframe>
         <h1>Toca a mandar o dinheiro ao Chico!!</h1>
-        <button class="cta">Mandar Dinheiro</button>
+        <button class="cta" id="openModalBtn">Mandar Dinheiro</button>
     </div>
+
+    <!-- Modal structure -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>A tua parte foi oferecida pelo Edgar, não precisas de pagar, só de aproveitar!</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for handling the modal -->
+    <script>
+        // Get modal and button elements
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("openModalBtn");
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        // Show modal when button is clicked
+        btn.onclick = function() {
+            modal.style.display = "flex";
+        }
+
+        // Close modal when close button is clicked
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking anywhere outside of the modal content
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>
