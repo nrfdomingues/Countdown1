@@ -1,13 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown para o evento do ano!!</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Countdown para o Evento do Ano!!</title>
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Add some basic styles to modernize the look -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        iframe {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .cta {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Countdown para o evento do ano!!</h1>
-    <iframe width="454" height="234" src="https://w2.countingdownto.com/5720009" frameborder="0"></iframe>
-    <h1>Toca a mandar o dinheiro ao Chico!!</h1>
+    <div class="container">
+        <h1>Countdown para o Evento do Ano!!</h1>
+        <iframe src="https://w2.countingdownto.com/5720009" frameborder="0"></iframe>
+        <h1>Toca a mandar o dinheiro ao Chico!!</h1>
+        <button class="cta">Mandar Dinheiro</button>
+    </div>
 </body>
+
 </html>
